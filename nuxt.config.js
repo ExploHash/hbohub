@@ -5,11 +5,12 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: "HboHub",
+    title: "HboHub - Vergelijk en vind jouw studie",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: 'Ben je op zoek naar een studie? Vergelijk hier alle opleidingen in nederland. Gemaakt door studenten voor studenten.'},
+      { name: 'keywords', content: 'zoeken,opleiding,studie,hbo,vergelijken,vinden,duaal,master,deeltijd,voltijd'}
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -29,7 +30,8 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/antd-ui'
+    '@/plugins/antd-ui',
+    '@/plugins/global'
   ],
   /*
   ** Nuxt.js dev-modules

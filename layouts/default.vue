@@ -3,7 +3,7 @@
     <a-layout-header class="header">
       <nav>
         <div class="logo"><span>Hbo</span><span>Hub</span></div>
-        <a-menu theme="white" mode="horizontal">
+        <a-menu theme="light" mode="horizontal">
           <a-menu-item @click="$router.push('/')" key="1">Home</a-menu-item>
           <a-menu-item @click="$router.push('/favourites')" key="2">Favorieten</a-menu-item>
         </a-menu>
@@ -12,6 +12,7 @@
     <a-layout-content>
       <nuxt />
     </a-layout-content>
+    <a-layout-footer>© 2020 <a href="https://nl.linkedin.com/in/jbeaart">Jimmy Beaart</a> - <a href="mailto:dev@hbohub.nl">Feedback & Contact</a></a-layout-footer>
   </a-layout>
 </template>
 
@@ -25,14 +26,17 @@ body {
 
 main {
   padding: 70px 15%;
+  padding-bottom: 70px;
 }
 
 .ant-layout-header{
   background: white;
   padding: 0px;
+  height: auto;
 }
 
 .ant-layout {
+  min-height: 100vh;
   background: white;
 }
 
@@ -42,6 +46,13 @@ header {
   width: 100%;
   z-index: 99;
   height: auto;
+}
+
+footer{
+  position: relative;
+  width: 100%;
+  height: 70px;
+  bottom: 0px;
 }
 
 .logo {
